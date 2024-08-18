@@ -78,7 +78,7 @@ accessing endpoints
 -------------------
 find book by title (exact match):
 
-curl -X POST -H "Authorization: Bearer <your-read-access-token>" localhost:8080/find-book --data-urlencode "title=<your-title>" -v
+curl -X POST -H "Authorization: Bearer -your-read-access-token-" localhost:8080/find-book --data-urlencode "title=<your-title>" -v
 
 find book by authors (exact match):
 

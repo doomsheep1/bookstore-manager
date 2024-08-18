@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -33,6 +34,18 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class OAuth2AuthorizationServerSecurityConfig {
+
+    @Value("${NORMAL_CLIENT_USER_ID}")
+    private String normal_client_id;
+
+    @Value("${NORMAL_CLIENT_USER_SECRET}")
+    private String normal_client_secret;
+    
+    @Value("${ADMIN_CLIENT_USER_ID}")
+    private String admin_client_id;
+
+    @Value("${ADMIN_CLIENT_USER_SECRET}")
+    private String admin_client_secret;
 
     @Bean 
 	@Order(1)
@@ -80,8 +93,8 @@ public class OAuth2AuthorizationServerSecurityConfig {
         List<RegisteredClient> registrations = new ArrayList<RegisteredClient>();
         
         RegisteredClient bookstoreNormalClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("normal-client")
-                .clientSecret("{noop}secret-client")
+                .clientId(normal_client_id)
+                .clientSecret(normal_client_secret)
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
                 .scope("book:create")
@@ -91,8 +104,8 @@ public class OAuth2AuthorizationServerSecurityConfig {
                 .build();
 
             RegisteredClient bookstoreAdminClient = RegisteredClient.withId(UUID.randomUUID().toString())
-            .clientId("admin-client")
-            .clientSecret("{noop}secret-admin")
+            .clientId(admin_client_id)
+            .clientSecret(admin_client_secret)
             .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
             .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
             .scope("book:create")

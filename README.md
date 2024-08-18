@@ -28,6 +28,7 @@ Java Spring Boot REST API take home assignment requirements:
 1. Requires JDK 17 minimum
 2. CURL command line tool to make http requests (CURL is included as a command line tool by default in windows 10 command prompt), alternatively you may use PostMan
 3. Notepad or Notepad++ (preferred) to prepare your API request formats
+4. Maven (only if you wish to run the project)
 
 **The project includes the following:**
 1. REST API endpoints that perform CRUD (create, read, update, delete) operations on books
@@ -124,5 +125,10 @@ Author - Stephen King
 
 **How to start the application (Work - in - progress)**
 ------------------------------------------------------
-
+*Requries Maven to be installed on your PC*
+1. Download this project into your PC
+1. Open command line
+2. Navigate to project directory
+3. Run "mvn package", an executable jar file should be generated in target directory within the project directory
+4. run the bat script in the project directory BookStoreManager.bat
 

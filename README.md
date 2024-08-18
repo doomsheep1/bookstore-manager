@@ -125,7 +125,7 @@ Author - Stephen King
 
 **How to start the application (Work - in - progress)**
 ------------------------------------------------------
-*Requries Maven to be installed on your PC*
+*Requires Maven to be installed on your PC*
 1. Download this project into your PC
 1. Open command line
 2. Navigate to project directory

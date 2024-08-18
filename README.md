@@ -35,6 +35,7 @@ The project includes the following:
 3. Embedded H2 database, data only persists for as long as application is running. On application restart, all database data will be reset.
 
 The following section are command line operations:
+
 normal-client bearer tokens request samples
 -------------------------------------------
 Create book access token:

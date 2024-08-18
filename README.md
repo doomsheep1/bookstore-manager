@@ -125,10 +125,10 @@ Author - Stephen King
 
 **How to start the application**
 --------------------------------
-*Requires Maven to be installed on your PC*
+*Requires Maven and JDK 17 minimum to be installed on your PC*
 1. Download this project into your PC
 1. Open command line
-2. Navigate to project directory
+2. Navigate to the project directory containing the pom.xml file
 3. Run "mvn package", an executable jar file should be generated in target directory within the project directory
 4. run the bat script in the project directory BookStoreManager.bat
 

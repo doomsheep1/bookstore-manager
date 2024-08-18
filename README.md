@@ -8,6 +8,7 @@ Following API operations:
 •	Delete book (Restricted permission, admin only)
 
 Notes:
+
 •	A book is identified uniquely by its ISBN and can have more than 1 author.
 
 •	All books info (Book information like title, ISBN, Year of Publication, Author(s), Price, Genre etc.) must be stored in a database.

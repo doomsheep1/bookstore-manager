@@ -95,7 +95,7 @@ curl -X POST -H "Authorization: Bearer your-create-access-token" -H "Content-Typ
 
 update book (by isbn only):
 
-curl -X PUT -H "Authorization: Bearer your-update-access-token" -H "Content-Type: application/json" -d "your-update-book-json-request" localhost:8080/update-book/<your-isbn-to-be-updated> -v
+curl -X PUT -H "Authorization: Bearer your-update-access-token" -H "Content-Type: application/json" -d "your-update-book-json-request" localhost:8080/update-book/your-isbn-to-be-updated -v
 
 delete book (by isbn only):
 

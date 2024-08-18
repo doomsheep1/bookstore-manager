@@ -79,27 +79,27 @@ accessing endpoints
 -------------------
 find book by title (exact match):
 
-curl -X POST -H "Authorization: Bearer your-read-access-token" localhost:8080/find-book --data-urlencode "title=<your-title>" -v
+curl -X POST -H "Authorization: Bearer your-read-access-token" localhost:8080/find-book --data-urlencode "title=your-title" -v
 
 find book by authors (exact match):
 
-curl -X POST -H "Authorization: Bearer your-read-access-token" localhost:8080/find-book --data-urlencode "authors=<your-author1>,<yourauthor2>" -v
+curl -X POST -H "Authorization: Bearer your-read-access-token" localhost:8080/find-book --data-urlencode "authors=your-author1,yourauthor2" -v
 
 find book by title AND authors (exact match):
 
-curl -X POST -H "Authorization: Bearer your-read-access-token" localhost:8080/find-book --data-urlencode "title=<your-title>" --data-urlencode "authors=<your-author1>,<yourauthor2>" -v
+curl -X POST -H "Authorization: Bearer your-read-access-token" localhost:8080/find-book --data-urlencode "title=your-title" --data-urlencode "authors=your-author1,yourauthor2" -v
 
 add book:
 
-curl -X POST -H "Authorization: Bearer your-create-access-token" -H "Content-Type: application/json" -d "<your-create-book-json-request>" localhost:8080/add-book -v
+curl -X POST -H "Authorization: Bearer your-create-access-token" -H "Content-Type: application/json" -d "your-create-book-json-request" localhost:8080/add-book -v
 
 update book (by isbn only):
 
-curl -X PUT -H "Authorization: Bearer your-update-access-token" -H "Content-Type: application/json" -d "<your-update-book-json-request" localhost:8080/update-book/<your-isbn-to-be-updated> -v
+curl -X PUT -H "Authorization: Bearer your-update-access-token" -H "Content-Type: application/json" -d "your-update-book-json-request" localhost:8080/update-book/<your-isbn-to-be-updated> -v
 
 delete book (by isbn only):
 
-curl -X DELETE -H "Authorization: Bearer your-delete-access-token" localhost:8080/delete-book --data-urlencode "isbn=<your-isbn-to-be-deleted>" -v
+curl -X DELETE -H "Authorization: Bearer your-delete-access-token" localhost:8080/delete-book --data-urlencode "isbn=your-isbn-to-be-deleted" -v
 
 request samples:
 
